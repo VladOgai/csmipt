@@ -1,5 +1,5 @@
 def bob(n: int) -> int:
-    global mem1
+    global mem1 # я лентяй, поэтому мемоизация оформлена через глобальную переменную
     if n in mem1:
         return mem1[n]
     mem1[n] = bob(n - 2) + bob(n - 1)
