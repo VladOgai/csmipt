@@ -1,10 +1,11 @@
+dpL = [0, 1, 2, 4]
+dpU = [0, 1, 2, 3]
+for _ in range(27):
+    dpL.append(dpU[-1] + dpL[-1])
+    dpU.append(dpL[-2] + dpL[-3])
+
 inp = int(input())
-stacks = []
 while inp != 0:
-    stacks.append(inp)
+    res = 2 ** inp - dpU[inp] - dpL[inp]
+    print(res)
     inp = int(input())
-odd = [2 * x + 1 for x in range(max(stacks) + 1)]
-j = 0
-for i in stacks:
-    print(odd[i - 3] + j if i >= 3 else 0)
-    j = odd[i - 3]
