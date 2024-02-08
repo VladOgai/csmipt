@@ -29,5 +29,6 @@ for col in columns:
     subdata2 = [sum(dframe[col]), sum(dframe[col]) / len(dframe[col]), dframe[col].std()]
     data2.append(subdata2)
 tdata2 = [[data2[j][i] for j in range(len(data2))] for i in range(len(data2[0]))]
-dframechars = pandas.DataFrame(tdata2, columns=columns, index=['Суммарное значение', 'Среднее значение', 'Среднеквадратическое отклонение'])
+dframechars = pandas.DataFrame(tdata2, columns=columns, index=['Суммарное значение', 'Среднее значение',
+                                                               'Среднеквадратическое отклонение'])
 dframechars.to_csv('characteristics_table.csv')
