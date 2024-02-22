@@ -85,8 +85,8 @@ matrix = []
 for _ in range(N):
     matrix.append(list(map(int, input().split())))
 sum_tree, reference = build_2_tree(matrix, N)
-print(pd.DataFrame(reference))
-print(pd.DataFrame(sum_tree))
+# print(pd.DataFrame(reference))
+# print(pd.DataFrame(sum_tree))
 for _ in range(K):
     x1, y1, x2, y2 = map(int, input().split())  # почему у нас из условия задачи x по вертикали получается...
-    print(find_result(matrix, sum_tree, reference, x1, y1, x2, y2))
+    print(find_result(matrix, sum_tree, reference, x1, y1, x2 + 1, y2 + 1))
