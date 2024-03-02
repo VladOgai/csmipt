@@ -161,7 +161,7 @@ for _ in range(t):
                 inputs = input()
             case 'SUM':
                 x1, y1, x2, y2 = map(int, inputs[3:].split())
-                print(find_result(matrix, sumtree, reftree, x1, y1, x2 + 1, y2 + 1  ))
+                print(find_result(matrix, sumtree, reftree, x1, y1, x2 + 1, y2 + 1))
                 inputs = input()
             case _:
                 inputs = input()

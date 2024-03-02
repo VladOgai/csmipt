@@ -1,0 +1,1 @@
+print(*map(str, ['a', 1]))
